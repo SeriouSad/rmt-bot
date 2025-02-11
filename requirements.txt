@@ -1,0 +1,10 @@
+Django==5.1.5
+pyTelegramBotAPI==4.26.0
+Telethon==1.38.1
+gunicorn==21.2.0
+psycopg2-binary==2.9.6
+celery~=5.4.0
+Pyrogram~=2.0.106
+vkbottle~=4.4.3.post1
+telebot~=0.0.5
+redis~=5.0.1

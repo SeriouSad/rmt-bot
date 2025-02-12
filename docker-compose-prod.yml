@@ -23,6 +23,8 @@
         - POSTGRES_DB=hashtag_db
       ports:
         - "${DB_PORT:-1338}:5432"
+    redis:
+      image: "redis"
     celery:
       build:
         context: .

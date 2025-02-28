@@ -8,9 +8,11 @@ import re
 
 
 def process_media_message(message: types.Message):
+    print(message)
     text = message.text if message.text else message.caption
     hashtags = re.findall(r'#\w+', text)
     hashtags = list(map(lambda x: x.lower(), hashtags))
+    print(text)
     if message.reply_to_message:
         reply_text = message.reply_to_message.text if message.reply_to_message.text else message.reply_to_message.caption
         if reply_text:
@@ -35,11 +37,13 @@ def send_welcome(message: types.Message):
 @bot.message_handler(chat_hashtags=True, content_types=['text', 'photo', 'document', 'video'])
 def handle_message(message: types.Message):
     process_media_message(message)
+    print(f"Сообщение новое {message}")
 
 
 @bot.edited_message_handler(chat_hashtags=True, content_types=['text', 'photo', 'document', 'video'])
 def handle_edit(message: types.Message):
     process_media_message(message)
+    print(f"Сообщение изменено {message}")
 
 
 

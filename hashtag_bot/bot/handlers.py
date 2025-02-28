@@ -37,9 +37,9 @@ def handle_message(message: types.Message):
     process_media_message(message)
 
 
-@bot.edited_message_handler(chat_hashtags=True, content_types=['text', 'photo', 'document', 'video'])
-def handle_edit(message: types.Message):
-    process_media_message(message)
+# @bot.edited_message_handler(chat_hashtags=True, content_types=['text', 'photo', 'document', 'video'])
+# def handle_edit(message: types.Message):
+#     process_media_message(message)
 
 
 

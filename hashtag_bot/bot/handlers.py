@@ -37,9 +37,16 @@ def handle_message(message: types.Message):
     process_media_message(message)
 
 
+# <<<<<<< HEAD
+# # @bot.edited_message_handler(chat_hashtags=True, content_types=['text', 'photo', 'document', 'video'])
+# # def handle_edit(message: types.Message):
+# #     process_media_message(message)
+# =======
 # @bot.edited_message_handler(chat_hashtags=True, content_types=['text', 'photo', 'document', 'video'])
 # def handle_edit(message: types.Message):
 #     process_media_message(message)
+#     print(f"Сообщение изменено {message}")
+# >>>>>>> c0c3ead6ffad9c459056fba59ca190c47f41d486
 
 
 

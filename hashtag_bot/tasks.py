@@ -17,7 +17,7 @@ from hashtag_bot.models import ChatModel
 def process_message(message_id, chat_id, message_date, hashtags: List[str], text, media_group_id=None, reply_message_id=None):
     chat = ChatModel.objects.get(tg_id=chat_id)
     topics = get_chat_topics(chat.parent_chat.tg_id)
-
+    print(topics)
     unrecognized_topics = []
 
     for i in hashtags:
